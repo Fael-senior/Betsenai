@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LettaBet — Apostas Esportivas e Cassino Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Icon sprite (hidden) -->
+<svg style="display:none">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5M6 10v9.5h5V15h2v4.5h5V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sports" viewBox="0 0 24 24"><path d="M7 4h10v3.2a5 5 0 0 1-10 0V4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 5H4.5A2.5 2.5 0 0 0 4 9.9L7 11M17 5h2.5A2.5 2.5 0 0 1 20 9.9L17 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 12.2V16m-3 4h6l-1-3H10l-1 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
+  <symbol id="i-casino" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-livecasino" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 10.5 21 7.5v9L16 13.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="16" y1="16" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.6-4.6 4.2 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.2 6.1-.6L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M5 5.5A2 2 0 0 1 7 3.5h10a2 2 0 0 1 2 2v2H7a2 2 0 0 0 0 4h12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 4h10v3.2a5 5 0 0 1-10 0V4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 12v2.5h3V12M9 19h6l-.6-2.5H9.6L9 19Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c.6-3.2 2.9-5 5.5-5s4.9 1.8 5.5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 13.2c2.2.2 3.8 1.8 4.3 4.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-chest" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 10c0-3.3 3.6-6 8-6s8 2.7 8 6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="14" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M4 5h2l1.6 9.6a2 2 0 0 0 2 1.7h7a2 2 0 0 0 2-1.6L20 8.5H6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19.5" r="1.3" fill="currentColor"/><circle cx="17" cy="19.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8.3 15 10.5l-1.1 3.5H10L9 10.5 12 8.3ZM12 3.5v4.8M12 19.7v-4.8M4.5 9.5l3.4 1.4M19.5 9.5l-3.4 1.4M4.7 15.2l3.9-1M19.3 15.2l-3.9-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9.5" width="16" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 9.5h16v3.5H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><line x1="12" y1="9.5" x2="12" y2="19.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 9.5c0-2.5-1.8-4-3.4-4-1.4 0-2.4 1-2.4 2.2 0 1.2 1 1.8 2.2 1.8H12ZM12 9.5c0-2.5 1.8-4 3.4-4 1.4 0 2.4 1 2.4 2.2 0 1.2-1 1.8-2.2 1.8H12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14.5 12.2h4.5v2.6h-4.5a1.3 1.3 0 0 1 0-2.6Z" fill="currentColor"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3.5c1 2.2-.5 3.4-1.4 4.6-1.4 1.8-.7 3-.2 3.6-1.6-.4-2.9-2-2.6-4C6 9.2 5 11.3 5 13.5A7 7 0 0 0 19 13.5c0-3-1.6-5-3.4-6.4.2 1.3-.2 2.2-1 2.7.2-2.4-.9-4.5-2.6-6.3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h5.5L11 21l8-11h-5.5L13 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M3 13.5 21 6l-6.5 15-2.2-6.3L3 13.5Zm9 3.7 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-mines" viewBox="0 0 24 24"><circle cx="11" cy="13" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 3.5v2.2M16.5 5.5l-1.4 1.6M5.5 5.5l1.4 1.6M20 13h-2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m17.5 17.5 2.7 2.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-2.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H9l-4 3.5V16h-.5A2.5 2.5 0 0 1 4 13.5v-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M9.5 7V5.2A1.2 1.2 0 0 1 10.7 4h2.6a1.2 1.2 0 0 1 1.2 1.2V7M7 7l.9 11.2A1.8 1.8 0 0 0 9.7 20h4.6a1.8 1.8 0 0 0 1.8-1.8L17 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 18V6m0 0-5 5m5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 6v12m0 0 5-5m-5 5-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <button class="menu-toggle" aria-label="Abrir menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+
+    <a href="#" class="logo">
+      <span class="logo-mark">
+        <img src="bola.png" alt="Betsenai logo" width="34" height="34" />
+      </span>
+      <span class="logo-text">Betsenai</span>
+    </a>
+
+    <nav class="nav-main">
+      <a href="#" class="nav-item is-active"><svg class="icon icon-sm"><use href="#i-home"/></svg>Início</a>
+      <a href="#" class="nav-item"><svg class="icon icon-sm"><use href="#i-sports"/></svg>Esportes</a>
+      <a href="#" class="nav-item"><svg class="icon icon-sm nav-icon-live"><use href="#i-live"/></svg>Ao vivo</a>
+      <a href="#" class="nav-item"><svg class="icon icon-sm"><use href="#i-casino"/></svg>Cassino</a>
+      <a href="#" class="nav-item"><svg class="icon icon-sm"><use href="#i-livecasino"/></svg>Cassino Ao vivo</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn-icon" aria-label="Buscar"><svg class="icon"><use href="#i-search"/></svg></button>
+      <button class="btn btn-ghost" id="openLogin">Entrar</button>
+      <button class="btn btn-primary" id="openRegister">
+        <span class="btn-pix">PIX</span> Registrar
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Layout -->
+<div class="layout">
+
+  <!-- Sidebar Left -->
+  <aside class="sidebar-left">
+    <div class="promo-stack">
+      <button class="promo-tile promo-daily">
+        <span class="promo-eyebrow">Participe do</span>
+        <span class="promo-title">Prêmio Diário</span>
+        <svg class="promo-glyph"><use href="#i-star"/></svg>
+      </button>
+      <button class="promo-tile promo-missions">
+        <span class="promo-eyebrow">Veja suas</span>
+        <span class="promo-title">Missões</span>
+        <svg class="promo-glyph"><use href="#i-scroll"/></svg>
+      </button>
+      <button class="promo-tile promo-tournaments">
+        <span class="promo-eyebrow">Confira os</span>
+        <span class="promo-title">Torneios</span>
+        <svg class="promo-glyph"><use href="#i-trophy"/></svg>
+      </button>
+      <button class="promo-tile promo-referral">
+        <span class="promo-eyebrow">Participe do</span>
+        <span class="promo-title">Indique e Ganhe</span>
+        <svg class="promo-glyph"><use href="#i-users"/></svg>
+      </button>
+      <button class="promo-tile promo-vault">
+        <span class="promo-eyebrow">Resgate seus</span>
+        <span class="promo-title">Baús</span>
+        <svg class="promo-glyph"><use href="#i-chest"/></svg>
+      </button>
+      <button class="promo-tile promo-shop">
+        <span class="promo-eyebrow">Acesse a</span>
+        <span class="promo-title">Loja</span>
+        <svg class="promo-glyph"><use href="#i-cart"/></svg>
+      </button>
+      <button class="promo-tile promo-pool" id="btnPromo">
+        <span class="promo-eyebrow">Participe do</span>
+        <span class="promo-title">Bolão</span>
+        <svg class="promo-glyph"><use href="#i-ball"/></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-search">
+      <svg class="icon icon-sm search-glyph"><use href="#i-search"/></svg>
+      <input type="text" placeholder="Buscar times, ligas, jogos…">
+    </div>
+
+    <div class="sports-tabs">
+      <button class="sports-tab is-active">Esportes</button>
+      <button class="sports-tab">Ao vivo <span class="live-dot"></span></button>
+    </div>
+
+    <nav class="sports-list">
+      <div class="sports-group">
+        <button class="sports-group-head">
+          <svg class="icon icon-sm sports-group-icon"><use href="#i-ball"/></svg>Futebol<svg class="icon icon-xs chev"><use href="#i-chevron"/></svg>
+        </button>
+        <div class="sports-sub">
+          <a href="#" class="sports-sub-item is-active"><svg class="icon icon-xs"><use href="#i-trophy"/></svg> Copa do Mundo 2026</a>
+          <a href="#" class="sports-sub-item"><svg class="icon icon-xs"><use href="#i-ball"/></svg> Jogos do Brasil — 2026</a>
+          <a href="#" class="sports-sub-item"><svg class="icon icon-xs"><use href="#i-bolt"/></svg> Odds Turbinadas Copa 2026</a>
+          <a href="#" class="sports-sub-item"><svg class="icon icon-xs"><use href="#i-flame"/></svg> Bingão Turbinado</a>
+        </div>
+      </div>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-ball"/></svg>Basquete<svg class="icon icon-xs chev"><use href="#i-chevron"/></svg></a>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-casino"/></svg>E-Futebol</a>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-ball"/></svg>Tênis de mesa</a>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-ball"/></svg>Tênis</a>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-shield"/></svg>MMA</a>
+      <a href="#" class="sports-group-head flat"><svg class="icon icon-sm sports-group-icon"><use href="#i-ball"/></svg>Futebol Americano</a>
+    </nav>
+  </aside>
+
+  <!-- Center content -->
+  <main class="content-center">
+
+    <!-- Hero banner carousel -->
+    <section class="hero-banner">
+      <div class="hero-slide">
+        <div class="hero-copy">
+          <span class="hero-kicker">Bolão da LettaBet</span>
+          <h2 class="hero-amount">R$ 500.000<small>,00</small></h2>
+          <span class="hero-sub">em prêmios · Copa do Mundo 2026</span>
+          <button class="btn btn-hero">Dar meu palpite</button>
+          <span class="hero-legal">*Consulte o regulamento oficial</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category rail -->
+    <section class="category-rail">
+      <button class="category-pill">
+        <span class="category-badge">NOVO</span>
+        <svg class="category-icon"><use href="#i-star"/></svg><span>Prêmios Diários</span>
+      </button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-chest"/></svg><span>Baú</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-casino"/></svg><span>Cassino</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-livecasino"/></svg><span>Cassino ao Vivo</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-scroll"/></svg><span>Missões</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-ball"/></svg><span>Bolão</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-plane"/></svg><span>Aviator</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-trophy"/></svg><span>Torneios</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-mines"/></svg><span>Mines</span></button>
+      <button class="category-pill"><svg class="category-icon"><use href="#i-gift"/></svg><span>Promoções</span></button>
+    </section>
+
+    <!-- Search + filter bar -->
+    <section class="filter-bar">
+      <div class="filter-search">
+        <svg class="icon icon-sm search-glyph"><use href="#i-search"/></svg>
+        <input type="text" placeholder="Buscar: Lakers, Flamengo, Aviator…">
+      </div>
+      <button class="btn btn-filter">Provedor <svg class="icon icon-xs chev"><use href="#i-chevron"/></svg></button>
+    </section>
+
+    <!-- Providers strip -->
+    <section class="providers-strip">
+      <span class="provider-chip">Pragmatic Play</span>
+      <span class="provider-chip">PG Soft</span>
+      <span class="provider-chip">Games Global</span>
+      <span class="provider-chip">Spribe</span>
+      <span class="provider-chip">Evolution</span>
+      <span class="provider-chip">Hacksaw Gaming</span>
+      <span class="provider-chip">Playtech</span>
+      <span class="provider-chip">Amusnet</span>
+    </section>
+
+    <!-- Matches section -->
+    <section class="panel">
+      <div class="panel-head">
+        <h3><svg class="panel-icon"><use href="#i-trophy"/></svg>Copa do Mundo 2026</h3>
+        <a href="#" class="panel-link">Ver todos →</a>
+      </div>
+
+      <div class="matches-track">
+        <article class="match-card is-live">
+          <header class="match-meta">
+            <span class="match-league live"><span class="live-pulse"></span>AO VIVO · 63'</span>
+            <span class="match-time">Copa do Mundo</span>
+          </header>
+          <div class="match-teams">
+            <div class="team"><span class="flag">🇺🇸</span>EUA<span class="team-score">2</span></div>
+            <span class="match-vs">×</span>
+            <div class="team"><span class="flag">🇧🇦</span>Bósnia e Herz.<span class="team-score">1</span></div>
+          </div>
+          <div class="match-odds">
+            <button class="odd"><span class="odd-label">1</span><span class="odd-value">1.40</span><svg class="odd-trend up"><use href="#i-arrow-up"/></svg></button>
+            <button class="odd"><span class="odd-label">X</span><span class="odd-value">4.89</span><svg class="odd-trend down"><use href="#i-arrow-down"/></svg></button>
+            <button class="odd"><span class="odd-label">2</span><span class="odd-value">7.71</span></button>
+          </div>
+          <footer class="match-more">+1205 mercados</footer>
+        </article>
+
+        <article class="match-card">
+          <header class="match-meta">
+            <span class="match-league">Copa do Mundo</span>
+            <span class="match-time">02/07 · 16:00</span>
+          </header>
+          <div class="match-teams">
+            <div class="team"><span class="flag">🇪🇸</span>Espanha</div>
+            <span class="match-vs">×</span>
+            <div class="team"><span class="flag">🇦🇹</span>Áustria</div>
+          </div>
+          <div class="match-odds">
+            <button class="odd"><span class="odd-label">1</span><span class="odd-value">1.33</span><svg class="odd-trend up"><use href="#i-arrow-up"/></svg></button>
+            <button class="odd"><span class="odd-label">X</span><span class="odd-value">5.13</span></button>
+            <button class="odd"><span class="odd-label">2</span><span class="odd-value">9.68</span><svg class="odd-trend down"><use href="#i-arrow-down"/></svg></button>
+          </div>
+          <footer class="match-more">+1134 mercados</footer>
+        </article>
+
+        <article class="match-card">
+          <header class="match-meta">
+            <span class="match-league">Copa do Mundo</span>
+            <span class="match-time">02/07 · 20:00</span>
+          </header>
+          <div class="match-teams">
+            <div class="team"><span class="flag">🇵🇹</span>Portugal</div>
+            <span class="match-vs">×</span>
+            <div class="team"><span class="flag">🇭🇷</span>Croácia</div>
+          </div>
+          <div class="match-odds">
+            <button class="odd"><span class="odd-label">1</span><span class="odd-value">1.80</span></button>
+            <button class="odd"><span class="odd-label">X</span><span class="odd-value">3.45</span></button>
+            <button class="odd"><span class="odd-label">2</span><span class="odd-value">4.86</span></button>
+          </div>
+          <footer class="match-more">+1137 mercados</footer>
+        </article>
+
+        <article class="match-card">
+          <header class="match-meta">
+            <span class="match-league">Copa do Mundo</span>
+            <span class="match-time">03/07 · 15:00</span>
+          </header>
+          <div class="match-teams">
+            <div class="team"><span class="flag">🇨🇭</span>Suíça</div>
+            <span class="match-vs">×</span>
+            <div class="team"><span class="flag">🇩🇿</span>Argélia</div>
+          </div>
+          <div class="match-odds">
+            <button class="odd"><span class="odd-label">1</span><span class="odd-value">2.04</span></button>
+            <button class="odd"><span class="odd-label">X</span><span class="odd-value">3.20</span></button>
+            <button class="odd"><span class="odd-label">2</span><span class="odd-value">4.03</span></button>
+          </div>
+          <footer class="match-more">+1122 mercados</footer>
+        </article>
+
+        <article class="match-card">
+          <header class="match-meta">
+            <span class="match-league">Copa do Mundo</span>
+            <span class="match-time">03/07 · 19:00</span>
+          </header>
+          <div class="match-teams">
+            <div class="team"><span class="flag">🇦🇷</span>Argentina</div>
+            <span class="match-vs">×</span>
+            <div class="team"><span class="flag">🇨🇻</span>Cabo Verde</div>
+          </div>
+          <div class="match-odds">
+            <button class="odd"><span class="odd-label">1</span><span class="odd-value">1.16</span></button>
+            <button class="odd"><span class="odd-label">X</span><span class="odd-value">7.44</span></button>
+            <button class="odd"><span class="odd-label">2</span><span class="odd-value">18.94</span></button>
+          </div>
+          <footer class="match-more">+1077 mercados</footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- Odds turbinadas ticker -->
+    <section class="panel">
+      <div class="panel-head">
+        <h3><svg class="panel-icon"><use href="#i-bolt"/></svg>Odds Turbinadas</h3>
+      </div>
+      <div class="ticker-track">
+        <button class="ticker-chip">🚪 Abriram os portões <strong>R$50 → R$2.300</strong></button>
+        <button class="ticker-chip">🇺🇸 Chama o Tio Sam <strong>R$50 → R$2.100</strong></button>
+        <button class="ticker-chip">💵 O dólar caiu <strong>R$50 → R$2.000</strong></button>
+        <button class="ticker-chip">🎉 Eu quero é entretenimento <strong>R$50 → R$2.400</strong></button>
+        <button class="ticker-chip">🔥 Sequência perfeita <strong>R$50 → R$1.900</strong></button>
+      </div>
+    </section>
+
+    <!-- Casino games -->
+    <section class="panel">
+      <div class="panel-head">
+        <h3><svg class="panel-icon"><use href="#i-casino"/></svg>Em Destaque no Cassino</h3>
+        <a href="#" class="panel-link">Ver todos →</a>
+      </div>
+      <div class="games-grid">
+        <article class="game-card">
+          <div class="game-thumb thumb-a">🐟</div>
+          <span class="game-tag tag-hot">HOT</span>
+          <h4>Fortune Kingfisher</h4>
+          <p class="game-provider">Games Global</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-b">🐯</div>
+          <span class="game-tag tag-new">NOVO</span>
+          <h4>Tiger Gold Blitz</h4>
+          <p class="game-provider">Games Global</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-c">✈️</div>
+          <span class="game-tag tag-top">TOP 10</span>
+          <h4>Aviator</h4>
+          <p class="game-provider">Spribe</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-d">💣</div>
+          <span class="game-tag tag-top">TOP 10</span>
+          <h4>Mines</h4>
+          <p class="game-provider">LettaBet Originals</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-e">👑</div>
+          <span class="game-tag tag-original">ORIGINAL</span>
+          <h4>Gates of Letta</h4>
+          <p class="game-provider">Pragmatic Play</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-f">🐰</div>
+          <span class="game-tag tag-trend">TRENDING</span>
+          <h4>Fortune Rabbit</h4>
+          <p class="game-provider">PG Soft</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bola na Rede -->
+    <section class="panel">
+      <div class="panel-head">
+        <h3><svg class="panel-icon"><use href="#i-ball"/></svg>Bola na Rede</h3>
+        <a href="#" class="panel-link">Ver todos →</a>
+      </div>
+      <div class="games-grid">
+        <article class="game-card">
+          <div class="game-thumb thumb-a">📺</div>
+          <span class="game-tag tag-new">NOVO</span>
+          <h4>Futebol Ao Vivo 24h</h4>
+          <p class="game-provider">Em tempo real</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-b">⚽</div>
+          <span class="game-tag tag-trend">TRENDING</span>
+          <h4>Super Brasileirão</h4>
+          <p class="game-provider">Ao vivo</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-c">🏟️</div>
+          <span class="game-tag tag-top">TOP 10</span>
+          <h4>Champions League</h4>
+          <p class="game-provider">Ao vivo</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-d">🥅</div>
+          <span class="game-tag tag-hot">OFERTA</span>
+          <h4>Libertadores Elite</h4>
+          <p class="game-provider">Premium</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-e">🎯</div>
+          <span class="game-tag tag-hot">HOT</span>
+          <h4>Copa do Mundo 2026</h4>
+          <p class="game-provider">Qualificatórias</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+        <article class="game-card">
+          <div class="game-thumb thumb-f">🏆</div>
+          <span class="game-tag tag-original">ORIGINAL</span>
+          <h4>Torneio das Estrelas</h4>
+          <p class="game-provider">Competição</p>
+          <button class="btn btn-play">Jogar</button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sidebar Right -->
+  <aside class="sidebar-right">
+    <div class="panel-card betslip-card">
+      <div class="betslip-head">
+        <h3 class="panel-card-title">Cupom de Aposta</h3>
+        <span class="betslip-count" id="betslipCount">0</span>
+      </div>
+
+      <div class="betslip-empty" id="betslipEmpty">
+        <svg class="icon icon-lg"><use href="#i-scroll"/></svg>
+        <p>Ainda não há apostas em seu cupom.</p>
+        <span>Clique em uma odd para adicioná-la aqui.</span>
+      </div>
+
+      <div class="betslip-selections" id="betslipSelections"></div>
+
+      <div class="betslip-footer" id="betslipFooter" hidden>
+        <div class="betslip-stake">
+          <label for="stakeInput">Valor da aposta</label>
+          <div class="stake-input">
+            <span>R$</span>
+            <input type="number" id="stakeInput" min="0" step="1" value="10">
+          </div>
+        </div>
+        <div class="betslip-summary">
+          <span>Odds totais</span>
+          <strong id="totalOdds">0.00</strong>
+        </div>
+        <div class="betslip-summary highlight">
+          <span>Ganho potencial</span>
+          <strong id="potentialReturn">R$ 0,00</strong>
+        </div>
+        <button class="btn btn-primary btn-block" id="placeBetBtn">Apostar agora</button>
+      </div>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="panel-card-title">Destaque no Cassino</h3>
+      <div class="highlight-item">
+        <div class="highlight-thumb">🐟</div>
+        <div>
+          <h4>Fortune Kingfisher</h4>
+          <span class="stars">⭐ 4.8/5</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-thumb">🐯</div>
+        <div>
+          <h4>Tiger Gold Blitz Fortunes</h4>
+          <span class="stars">⭐ 4.9/5</span>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-thumb">👑</div>
+        <div>
+          <h4>Gates of Letta</h4>
+          <span class="stars">⭐ 4.7/5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="panel-card-title">Categoria de Jogos</h3>
+      <ul class="chip-list">
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-casino"/></svg>Casual</li>
+        <li class="chip is-active"><svg class="icon icon-xs"><use href="#i-star"/></svg>Top 10</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-ball"/></svg>Bingo</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-gift"/></svg>Raspe e Ganhe</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-casino"/></svg>Slot</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-casino"/></svg>Mesa</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-casino"/></svg>Roleta</li>
+        <li class="chip"><svg class="icon icon-xs"><use href="#i-bolt"/></svg>Crash Games</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text small">Letta<em>Bet</em></span>
+      <p>Apostas esportivas e cassino online. Jogue com responsabilidade.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h5>Empresa</h5>
+        <a href="#">Sobre nós</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Privacidade</a>
+      </div>
+      <div>
+        <h5>Suporte</h5>
+        <a href="#">Central de ajuda</a>
+        <a href="#">Fale conosco</a>
+        <a href="#">Jogo responsável</a>
+      </div>
+    </div>
+    <div class="footer-responsible">
+      <span class="age-badge">18+</span>
+      <p>Aposte com moderação. Este é um site de demonstração — nenhuma aposta ou transação é real.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Login -->
+<div id="modalLogin" class="modal">
+  <div class="modal-content modal-sm">
+    <button class="close-modal" data-close="modalLogin"><svg class="icon icon-sm"><use href="#i-close"/></svg></button>
+    <h2>Entrar na LettaBet</h2>
+    <form class="form-generic" id="formLogin">
+      <div class="form-group">
+        <label for="loginUser">Email ou usuário</label>
+        <input type="text" id="loginUser" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPass">Senha</label>
+        <input type="password" id="loginPass" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+    </form>
+    <p class="modal-switch">Não tem conta? <a href="#" id="switchToRegister">Registre-se</a></p>
+  </div>
+</div>
+
+<!-- Modal: Cadastro -->
+<div id="modalCadastro" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" data-close="modalCadastro"><svg class="icon icon-sm"><use href="#i-close"/></svg></button>
+    <h2>Crie sua conta na LettaBet</h2>
+    <form class="form-generic" id="formCadastro">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Nome de usuário</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirmar senha</label>
+          <input type="password" id="confirmPassword" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
+      <p class="form-legal">Ao continuar você confirma ter 18 anos ou mais.</p>
+    </form>
+  </div>
+</div>
+
+<button class="support-fab" aria-label="Suporte"><svg class="icon"><use href="#i-chat"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
